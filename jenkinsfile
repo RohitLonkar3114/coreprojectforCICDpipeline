@@ -12,12 +12,12 @@ pipeline{
         stage("Build") {
             steps {
                 bat "dotnet restore"
-                bat "dotnet build --configureation Release"
+                bat "dotnet build --configuration Release"
             }
         }
         stage("Test") {
             steps {
-                bat "dotnet test --no--restore --configureation Release"
+                bat "dotnet test --no--restore --configuration Release"
             }
         }
         stage("Publish") {
